@@ -1,0 +1,196 @@
+        
+        AOS.init();
+    
+        $(document).ready(function() {
+            var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
+                var stickyHeight = sticky.outerHeight();
+                var stickyTop = stickyWrapper.offset().top;
+                if (scrollElement.scrollTop() >= stickyTop) {
+                    stickyWrapper.height(stickyHeight);
+                    sticky.addClass("is-sticky");
+                } else {
+                    sticky.removeClass("is-sticky");
+                    stickyWrapper.height('auto');
+                }
+            };
+            $('[data-toggle="sticky-onscroll"]').each(function() {
+                var sticky = $(this);
+                var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                sticky.before(stickyWrapper);
+                sticky.addClass('sticky');
+                $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function() {
+                    stickyToggle(sticky, stickyWrapper, $(this));
+                });
+                stickyToggle(sticky, stickyWrapper, $(window));
+            });
+        });
+ var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+         $(".owl-carouse2").owlCarousel({
+
+            //Basic Speeds
+            slideSpeed: 100,
+            paginationSpeed: 800,
+
+            //Autoplay
+            autoPlay: true,
+            goToFirst: true,
+            goToFirstSpeed: 1000,
+
+            // Navigation
+            navigation: true,
+            navigationText: ["<", ">"],
+            pagination: false,
+            paginationNumbers: true,
+
+            // Responsive
+            responsive: true,
+            items: 4,
+            itemsDesktop: [1199, 4],
+            itemsDesktopSmall: [980, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1]
+
+        })
+           $(".owl-carousel1").owlCarousel({
+
+            //Basic Speeds
+            slideSpeed: 100,
+            paginationSpeed: 800,
+
+            //Autoplay
+            autoPlay: true,
+            goToFirst: true,
+            goToFirstSpeed: 1000,
+
+            // Navigation
+            navigation: true,
+            navigationText: ["<", ">"],
+            pagination: false,
+            paginationNumbers: true,
+
+            // Responsive
+            responsive: true,
+            items: 1,
+            itemsDesktop: [1199, 1],
+            itemsDesktopSmall: [980, 1],
+            itemsTablet: [768, ],
+            itemsMobile: [479, 1]
+
+        })
+            $(".owl-carousel4").owlCarousel({
+
+            //Basic Speeds
+            slideSpeed: 100,
+            paginationSpeed: 800,
+
+            //Autoplay
+            autoPlay: true,
+            goToFirst: true,
+            goToFirstSpeed: 1000,
+
+            // Navigation
+            navigation: true,
+            navigationText: ["<", ">"],
+            pagination: false,
+            paginationNumbers: true,
+
+            // Responsive
+            responsive: true,
+            items: 3,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [980, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1]
+
+        })
+            $(".owl-carousel2").owlCarousel({
+
+            //Basic Speeds
+            slideSpeed: 100,
+            paginationSpeed: 800,
+
+            //Autoplay
+            autoPlay: true,
+            goToFirst: true,
+            goToFirstSpeed: 1000,
+
+            // Navigation
+            navigation: true,
+            navigationText: ["<", ">"],
+            pagination: false,
+            paginationNumbers: true,
+
+            // Responsive
+            responsive: true,
+            items: 3,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [980, 3],
+            itemsTablet: [768, 2],
+            itemsMobile: [479, 1]
+
+        })
+
+             $(".owl-carousel6").owlCarousel({
+
+            //Basic Speeds
+            slideSpeed: 1000,
+            paginationSpeed: 800,
+            animateOut: 'slideOutDown',
+            animateIn: 'flipInX',
+            //Autoplay
+            autoPlay: true,
+            goToFirst: true,
+            goToFirstSpeed: 1000,
+
+            // Navigation
+            navigation: true,
+            navigationText: ["<", ">"],
+            pagination: false,
+            paginationNumbers: true,
+
+            // Responsive
+            responsive: true,
+            items: 1,
+            itemsDesktop: [1199, 1],
+            itemsDesktopSmall: [980, 1],
+            itemsTablet: [768, 1],
+            itemsMobile: [479, 1]
+
+        })
+            // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 3000);
+    }
+
+         $(document).ready(function() {
+            $('#exampleModal1').modal('show');
+
+        });
+
+         // here code sleep slider
